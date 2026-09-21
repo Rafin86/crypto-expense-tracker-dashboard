@@ -7,6 +7,33 @@ import '@/global.css';
 
 import { Platform } from 'react-native';
 
+import rawPalette from './palette.json';
+
+/**
+ * Premium dark dashboard theme (gains/losses, backgrounds, type scale).
+ * Backed by palette.json, the single source of truth also read by tailwind.config.js,
+ * so `bg-background` / `text-gain` in className stays in sync with `Theme.colors.background` / `Theme.colors.gain.DEFAULT`.
+ */
+export const Theme = {
+  colors: {
+    background: rawPalette.background,
+    backgroundElevated: rawPalette.backgroundElevated,
+    backgroundElevatedHover: rawPalette.backgroundElevatedHover,
+    border: rawPalette.border,
+    borderStrong: rawPalette.borderStrong,
+    text: rawPalette.text,
+    accent: rawPalette.accent,
+    gain: rawPalette.gain,
+    loss: rawPalette.loss,
+  },
+  fontSize: Object.fromEntries(
+    Object.entries(rawPalette.fontSize).map(([key, [fontSize, lineHeight]]) => [
+      key,
+      { fontSize, lineHeight },
+    ])
+  ) as Record<keyof typeof rawPalette.fontSize, { fontSize: number; lineHeight: number }>,
+} as const;
+
 export const Colors = {
   light: {
     text: '#000000',
