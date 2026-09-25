@@ -1,56 +1,73 @@
-# Welcome to your Expo app 👋
+# Crypto Expense Tracker Dashboard
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A polished, cross-platform mobile dashboard for tracking crypto and everyday spending — built with Expo, React Native, and TypeScript. Runs natively on iOS, Android, and web from a single codebase.
 
-## Get started
+## Project Overview
 
-1. Install dependencies
+This project delivers a fast, native-feeling financial dashboard with a premium, high-converting dark UI. It's built on Expo's latest tooling — Expo Router, the React Native New Architecture, and the React Compiler — so screens render quickly and interactions feel instant, even on mid-range Android devices.
+
+The UI follows a single, consistent design system (deep dark background, emerald for gains, coral/red for losses) applied through Tailwind CSS utility classes via NativeWind, so every screen and component shares the same look and feel without repeated inline styling.
+
+State is centralized in a single Zustand store, keeping data flow predictable: adding a transaction anywhere in the app instantly and automatically updates the balance, the transaction list, and any other component reading from that state — no manual refresh logic required.
+
+## Tech Stack
+
+| Category | Technology |
+|---|---|
+| Framework | [Expo](https://expo.dev) SDK 57 (React Native New Architecture) |
+| UI Library | [React Native](https://reactnative.dev) 0.86 |
+| Language | [TypeScript](https://www.typescriptlang.org) (strict mode) |
+| Routing | [Expo Router](https://docs.expo.dev/router/introduction/) (file-based) |
+| State Management | [Zustand](https://github.com/pmndrs/zustand) |
+| Styling | [NativeWind](https://www.nativewind.dev) (Tailwind CSS for React Native) |
+| Persistence | AsyncStorage via Zustand's `persist` middleware |
+| Animation | React Native Reanimated |
+
+## Key Features Implemented
+
+- **Dynamic, live-updating balance** — the total balance is derived from actual transaction data (not a static number) and recalculates automatically the instant a transaction is added.
+- **Modular component architecture** — the dashboard is composed of small, self-contained, reusable components (`BalanceCard`, `QuickActions`, `TransactionHistory`), each independently typed and themeable.
+- **Local state persistence** — transactions are saved to on-device storage (AsyncStorage), so a user's data survives app restarts with zero extra configuration.
+- **Interactive "Add Expense" flow** — a native-feeling modal lets users add a new expense on the fly, with input validation and an immediate, reactive update to the balance and transaction list.
+- **Centralized, type-safe design system** — a single source of truth for color palette and typography scale, consumed consistently by both Tailwind classes and native `StyleSheet`/style objects.
+- **Category-colored transaction history** — inflows (income, sales) and outflows (expenses, purchases) are visually distinguished with green/red color coding at a glance.
+
+## How to Run
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org) 18 or later (LTS recommended)
+- npm (bundled with Node.js)
+- The [Expo Go](https://expo.dev/go) app installed on your iOS or Android device — or an iOS Simulator / Android Emulator set up locally
+
+### Steps
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/Rafin86/crypto-expense-tracker-dashboard.git
+   cd crypto-expense-tracker-dashboard
+   ```
+
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Start the development server**
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Open the app**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   - Scan the QR code shown in the terminal with the **Expo Go** app (Android: use the in-app scanner; iOS: use the Camera app) to run it on your own device.
+   - Or press `a` in the terminal to launch an Android emulator, `i` for an iOS simulator, or `w` to open it in a web browser.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+No additional setup, API keys, or backend services are required — the app runs entirely on local, on-device state.
 
-## Get a fresh project
+## License
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the MIT License — see [`LICENSE`](./LICENSE) for details.
