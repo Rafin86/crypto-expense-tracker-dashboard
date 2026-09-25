@@ -1,10 +1,22 @@
 # Crypto Expense Tracker Dashboard
 
-A polished, cross-platform mobile dashboard for tracking crypto and everyday spending — built with Expo, React Native, and TypeScript. Runs natively on iOS, Android, and web from a single codebase.
+## Demo
+
+<img src="docs/demo.gif" width="600" alt="App demo" />
+
+<table>
+  <tr>
+    <td><img src="docs/screenshot-1.png" width="220" alt="Screenshot 1" /></td>
+    <td><img src="docs/screenshot-2.png" width="220" alt="Screenshot 2" /></td>
+    <td><img src="docs/screenshot-3.png" width="220" alt="Screenshot 3" /></td>
+  </tr>
+</table>
+
+A cross-platform mobile dashboard for tracking crypto and everyday spending — built with Expo, React Native, and TypeScript. Tested on Android and web; Expo also supports iOS, but that platform hasn't been tested yet.
 
 ## Project Overview
 
-This project delivers a fast, native-feeling financial dashboard with a premium, high-converting dark UI. It's built on Expo's latest tooling — Expo Router, the React Native New Architecture, and the React Compiler — so screens render quickly and interactions feel instant, even on mid-range Android devices.
+This project delivers a financial dashboard built on Expo's latest tooling — Expo Router, the React Native New Architecture, and the React Compiler — and has been tested for smooth performance on mid-range Android devices.
 
 The UI follows a single, consistent design system (deep dark background, emerald for gains, coral/red for losses) applied through Tailwind CSS utility classes via NativeWind, so every screen and component shares the same look and feel without repeated inline styling.
 
@@ -30,7 +42,7 @@ State is centralized in a single Zustand store, keeping data flow predictable: a
 - **Local state persistence** — transactions are saved to on-device storage (AsyncStorage), so a user's data survives app restarts with zero extra configuration.
 - **Interactive "Add Expense" flow** — a native-feeling modal lets users add a new expense on the fly, with input validation and an immediate, reactive update to the balance and transaction list.
 - **Centralized, type-safe design system** — a single source of truth for color palette and typography scale, consumed consistently by both Tailwind classes and native `StyleSheet`/style objects.
-- **Category-colored transaction history** — inflows (income, sales) and outflows (expenses, purchases) are visually distinguished with green/red color coding at a glance.
+- **Inflow/outflow-colored transaction history** — inflows (income, sales) and outflows (expenses, purchases) are visually distinguished with green/red color coding at a glance.
 
 ## How to Run
 
