@@ -1,22 +1,22 @@
 # Crypto Expense Tracker Dashboard
 
+A cross-platform mobile dashboard for tracking crypto and everyday spending — built with Expo, React Native, and TypeScript. Tested on Android and web; Expo also supports iOS, but that platform hasn't been tested yet.
+
 ## Demo
 
-<img src="docs/demo.gif" width="600" alt="App demo" />
+<img src="docs/demo.gif" width="600" alt="App demo on Android" />
 
 <table>
   <tr>
-    <td><img src="docs/screenshot-1.png" width="220" alt="Screenshot 1" /></td>
-    <td><img src="docs/screenshot-2.png" width="220" alt="Screenshot 2" /></td>
-    <td><img src="docs/screenshot-3.png" width="220" alt="Screenshot 3" /></td>
+    <td><img src="docs/screenshot-1.png" width="220" alt="Dashboard" /></td>
+    <td><img src="docs/screenshot-2.png" width="220" alt="Add Expense modal" /></td>
+    <td><img src="docs/screenshot-3.png" width="220" alt="Updated transaction history" /></td>
   </tr>
 </table>
 
-A cross-platform mobile dashboard for tracking crypto and everyday spending — built with Expo, React Native, and TypeScript. Tested on Android and web; Expo also supports iOS, but that platform hasn't been tested yet.
-
 ## Project Overview
 
-This project delivers a financial dashboard built on Expo's latest tooling — Expo Router, the React Native New Architecture, and the React Compiler — and has been tested for smooth performance on mid-range Android devices.
+This project delivers a financial dashboard built on Expo's latest tooling — Expo Router, the React Native New Architecture, and the React Compiler — and has been tested on an Android phone.
 
 The UI follows a single, consistent design system (deep dark background, emerald for gains, coral/red for losses) applied through Tailwind CSS utility classes via NativeWind, so every screen and component shares the same look and feel without repeated inline styling.
 
@@ -48,7 +48,7 @@ State is centralized in a single Zustand store, keeping data flow predictable: a
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org) 18 or later (LTS recommended)
+- [Node.js](https://nodejs.org) 22.13.0 or later
 - npm (bundled with Node.js)
 - The [Expo Go](https://expo.dev/go) app installed on your iOS or Android device — or an iOS Simulator / Android Emulator set up locally
 
