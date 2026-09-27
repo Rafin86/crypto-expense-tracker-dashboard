@@ -2,6 +2,8 @@
 
 A cross-platform mobile dashboard for tracking crypto and everyday spending — built with Expo, React Native, and TypeScript. Tested on Android and web; Expo also supports iOS, but that platform hasn't been tested yet.
 
+Built with help from Claude / Claude Code. I directed the design and architecture, and reviewed and tested every change.
+
 ## Demo
 
 <img src="docs/demo.gif" width="600" alt="App demo on Android" />
@@ -43,6 +45,7 @@ State is centralized in a single Zustand store, keeping data flow predictable: a
 - **Interactive "Add Expense" flow** — a native-feeling modal lets users add a new expense on the fly, with input validation and an immediate, reactive update to the balance and transaction list.
 - **Centralized, type-safe design system** — a single source of truth for color palette and typography scale, consumed consistently by both Tailwind classes and native `StyleSheet`/style objects.
 - **Inflow/outflow-colored transaction history** — inflows (income, sales) and outflows (expenses, purchases) are visually distinguished with green/red color coding at a glance.
+- **Crypto buy/sell transactions (data model)** — the transaction model supports buy/sell types with an asset symbol and optional unit price; sells count as inflows and buys as outflows in the balance and history. The sample data includes a BTC purchase and an ETH sale. Adding crypto trades from within the app isn't built yet.
 
 ## How to Run
 
