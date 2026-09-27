@@ -16,6 +16,14 @@ Built with help from Claude / Claude Code. I directed the design and architectur
   </tr>
 </table>
 
+## Download
+
+[Download the Android APK (v1.0.0)](https://github.com/Rafin86/crypto-expense-tracker-dashboard/releases/tag/v1.0.0)
+
+The APK was built with [EAS Build](https://docs.expo.dev/build/introduction/).
+
+> **Note:** Android will ask you to allow installing apps from unknown sources before it installs the APK.
+
 ## Project Overview
 
 This project delivers a financial dashboard built on Expo's latest tooling — Expo Router, the React Native New Architecture, and the React Compiler — and has been tested on an Android phone.
